@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cash Drawer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cash-drawer-ui">
+      <header class="header">Change Drawer</header>
+      <main class="container">
+        <div class="drawer-section">
+          <div class="drawer-info">
+            <div id="drawer-balance" class="balance">Total Balance : ₹0</div>
+          </div>
+          <div class="drawer-table">
+            <div class="table-container">
+              <div class="header-row">
+                <div>Denomination</div>
+                <div>Quantity</div>
+                <div>Total</div>
+              </div>
+              <div class="denomination-row" id="denomination-row"></div>
+            </div>
+          </div>
+        </div>
+        <div class="transaction-section">
+          <div class="transaction-action">
+            <div class="input-group">
+              <label for="bill-amount">Bill Amount:</label>
+              <input
+                type="number"
+                id="bill-amount"
+                placeholder="Enter bill amount"
+                min="0"
+              />
+              <label for="customer-payment">Customer Payment:</label>
+              <input
+                type="number"
+                id="customer-payment"
+                placeholder="Enter payment amount"
+                min="0"
+              />
+            </div>
+            <button class="btn action-button" id="calculate-change">
+              Calculate Change
+            </button>
+          </div>
+          <div class="change-output" id="change-output">
+            <p>Change to be returned:</p>
+            <ul id="change-details" class="change-details"></ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
